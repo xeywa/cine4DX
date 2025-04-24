@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cine4DX - Asistente Virtual</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 2rem;
+    }
+    h1 {
+      margin: 0;
+      color: #e50914;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    main {
+      padding: 3rem 1rem;
+    }
+    footer {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎬 Bienvenido a Cine4DX</h1>
+    <p>Habla con nuestro asistente virtual para reservar entradas, snacks y más.</p>
+  </header>
+
+  <main>
+    <p>Haz clic en el icono de chat abajo a la derecha para comenzar 👇</p>
+  </main>
+
+  <footer>
+    &copy; 2025 Cine4DX. Todos los derechos reservados.
+  </footer>
+
+  <!-- Watson Assistant integration (Pega aquí tu script personalizado) -->
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "2d9c6c32-2446-445e-8d2d-d20d30eef2c6", // The ID of this integration.
+    region: "eu-de", // The region your integration is hosted in.
+    serviceInstanceID: "60ad798c-43b5-4289-aa4d-79f42db413a4", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
