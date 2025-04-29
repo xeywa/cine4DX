@@ -1,68 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cine4DX - Asistente Virtual</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cine4DX - Tu aventura comienza aquí</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #f0f0f0;
       margin: 0;
-      padding: 0;
-      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #fff;
     }
     header {
-      background-color: #1f1f1f;
-      padding: 2rem;
+      background-color: #b30000;
+      padding: 1em;
+      text-align: center;
     }
-    h1 {
+    header h1 {
       margin: 0;
-      color: #e50914;
+      font-size: 2.5em;
+      color: #fff;
     }
-    p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
+    .banner {
+      background-image: url('https://images.unsplash.com/photo-1581905764498-bb3e9be60f7c');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    main {
-      padding: 3rem 1rem;
+    .banner h2 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1em;
+      border-radius: 10px;
+      color: #f44336;
+      font-size: 2em;
+    }
+    .movies {
+      padding: 2em;
+      background-color: #1e1e1e;
+    }
+    .movies h3 {
+      color: #f44336;
+      margin-bottom: 1em;
+    }
+    .movie-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1.5em;
+    }
+    .movie {
+      background-color: #2b2b2b;
+      padding: 1em;
+      border-radius: 8px;
+      text-align: center;
+      width: 200px;
+    }
+    .movie img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    .movie h4 {
+      margin-top: 0.5em;
+      color: #fff;
     }
     footer {
-      background-color: #1f1f1f;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #888;
+      background-color: #b30000;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+      color: white;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>🎬 Bienvenido a Cine4DX</h1>
-    <p>Habla con nuestro asistente virtual para reservar entradas, snacks y más.</p>
+    <h1>Cine4DX</h1>
   </header>
 
-  <main>
-    <p>Haz clic en el icono de chat abajo a la derecha para comenzar 👇</p>
-  </main>
+  <section class="banner">
+    <h2>¡Vive la experiencia del cine como nunca antes!</h2>
+  </section>
+
+  <section class="movies">
+    <h3>🎬 Cartelera de esta semana</h3>
+    <div class="movie-list">
+      <div class="movie">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg" alt="Star Wars" />
+        <h4>Star Wars</h4>
+      </div>
+      <div class="movie">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/4b/Hunger_Games_Poster.jpg" alt="Los Juegos del Hambre" />
+        <h4>Los Juegos del Hambre</h4>
+      </div>
+      <div class="movie">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/87/Ringstrilogyposter.jpg" alt="El Señor de los Anillos" />
+        <h4>El Señor de los Anillos</h4>
+      </div>
+      <div class="movie">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/TheAvengers2012Poster.jpg" alt="Los Vengadores" />
+        <h4>Los Vengadores</h4>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 Cine4DX. Todos los derechos reservados.
+    <p>&copy; 2025 Cine4DX. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Watson Assistant integration (Pega aquí tu script personalizado) -->
-<script>
-  window.watsonAssistantChatOptions = {
-    integrationID: "2d9c6c32-2446-445e-8d2d-d20d30eef2c6", // The ID of this integration.
-    region: "eu-de", // The region your integration is hosted in.
-    serviceInstanceID: "60ad798c-43b5-4289-aa4d-79f42db413a4", // The ID of your service instance.
-    onLoad: async (instance) => { await instance.render(); }
-  };
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
-    document.head.appendChild(t);
-  });
-</script>
+  <!-- Integración del chatbot Dex -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "d32f2db9-6e0e-4270-8cf0-06b4b0a30cbe", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "b26a77f5-6105-461f-b34f-75b3a7900568", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
 </body>
 </html>
+
