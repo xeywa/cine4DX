@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cine4DX</title>
+  <title>Cine4DX - Tu aventura comienza aquí</title>
   <style>
     body {
       margin: 0;
@@ -36,6 +36,21 @@
       border-radius: 10px;
       color: #f44336;
       font-size: 2em;
+    }
+    .descripcion {
+      padding: 2em;
+      background-color: #1e1e1e;
+      text-align: center;
+    }
+    .descripcion h3 {
+      color: #f44336;
+      margin-bottom: 0.5em;
+    }
+    .descripcion p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+      color: #ddd;
     }
     .movies {
       padding: 2em;
@@ -82,27 +97,35 @@
   </header>
 
   <section class="banner">
-    <h2>Vive la experiencia del cine como nunca antes</h2>
+    <h2>¡Vive la experiencia del cine como nunca antes!</h2>
+  </section>
+
+  <section class="descripcion">
+    <h3>¿Qué es el cine 4DX?</h3>
+    <p>
+      El cine 4DX lleva la experiencia cinematográfica a un nuevo nivel mediante efectos sensoriales como movimiento de asientos, viento, niebla, luces, aromas y vibraciones,
+      todos sincronizados con la acción en pantalla. Sumérgete completamente en la película y siente cada explosión, cada carrera y cada emoción como si estuvieras dentro de la historia.
+    </p>
   </section>
 
   <section class="movies">
-    <h3>Cartelera actual</h3>
+    <h3>🎬 Cartelera de esta semana</h3>
     <div class="movie-list">
       <div class="movie">
         <img src="https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg" alt="Star Wars" />
         <h4>Star Wars</h4>
       </div>
       <div class="movie">
-        <img src="https://es.pinterest.com/pin/2885187252252197/" />
-        <h4>Los juegos del hambre</h4>
+        <img src="https://s2982.pcdn.co/wp-content/uploads/2013/09/HG-Fanart-cover-sanjota.deviantart.com_.jpg.webp" alt="Los Juegos del Hambre" />
+        <h4>Los Juegos del Hambre</h4>
       </div>
       <div class="movie">
         <img src="https://upload.wikimedia.org/wikipedia/en/8/87/Ringstrilogyposter.jpg" alt="El Señor de los Anillos" />
-        <h4>El señor de los anillos</h4>
+        <h4>El Señor de los Anillos</h4>
       </div>
       <div class="movie">
         <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/TheAvengers2012Poster.jpg" alt="Los Vengadores" />
-        <h4>Los vengadores</h4>
+        <h4>Los Vengadores</h4>
       </div>
     </div>
   </section>
@@ -112,20 +135,19 @@
   </footer>
 
   <!-- Integración del chatbot Dex -->
- <script>
-  window.watsonAssistantChatOptions = {
-    integrationID: "d32f2db9-6e0e-4270-8cf0-06b4b0a30cbe", // The ID of this integration.
-    region: "au-syd", // The region your integration is hosted in.
-    serviceInstanceID: "b26a77f5-6105-461f-b34f-75b3a7900568", // The ID of your service instance.
-    onLoad: async (instance) => { await instance.render(); }
-  };
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
-    document.head.appendChild(t);
-  });
-</script>
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "d32f2db9-6e0e-4270-8cf0-06b4b0a30cbe",
+      region: "au-syd",
+      serviceInstanceID: "b26a77f5-6105-461f-b34f-75b3a7900568",
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
 
 </body>
 </html>
-
