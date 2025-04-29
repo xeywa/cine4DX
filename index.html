@@ -93,7 +93,7 @@
         <h4>Star Wars</h4>
       </div>
       <div class="movie">
-        <img src="https://upload.wikimedia.org/wikipedia/en/4/4b/Hunger_Games_Poster.jpg" alt="Los Juegos del Hambre" />
+        <img src="https://es.pinterest.com/pin/2885187252252197/" />
         <h4>Los juegos del hambre</h4>
       </div>
       <div class="movie">
@@ -112,19 +112,19 @@
   </footer>
 
   <!-- Integración del chatbot Dex -->
-  <script>
-    window.watsonAssistantChatOptions = {
-      integrationID: "d32f2db9-6e0e-4270-8cf0-06b4b0a30cbe", // The ID of this integration.
-      region: "au-syd", // The region your integration is hosted in.
-      serviceInstanceID: "b26a77f5-6105-461f-b34f-75b3a7900568", // The ID of your service instance.
-      onLoad: async (instance) => { await instance.render(); }
-    };
-    setTimeout(function(){
-      const t=document.createElement('script');
-      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
-      document.head.appendChild(t);
-    });
-  </script>
+ <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "d32f2db9-6e0e-4270-8cf0-06b4b0a30cbe", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "b26a77f5-6105-461f-b34f-75b3a7900568", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
 
 </body>
 </html>
